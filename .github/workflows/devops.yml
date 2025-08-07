@@ -18,6 +18,7 @@ jobs:
 
 
   addition:
+    needs: greeting
     runs-on: ubuntu-latest
     steps:
       - name: add numbers
