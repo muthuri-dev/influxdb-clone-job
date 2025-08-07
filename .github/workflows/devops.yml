@@ -53,4 +53,4 @@ jobs:
         run: echo $((3*9))
 
       - name: get secret
-        run: ${{secrets.GITHUB_TOKEN}}
+        run: echo ${{ secrets.GITHUB_TOKEN }}
