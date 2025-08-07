@@ -38,6 +38,8 @@ jobs:
 
       - name: Checkout Repo
         uses: actions/checkout@v4
-        
+
       - name: Execute script
-        run: ./script.sh
+        run: |
+         chmod +x script.sh
+         ./script.sh
