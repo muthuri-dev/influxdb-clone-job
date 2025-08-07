@@ -4,6 +4,9 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
       - name: Morning greet
         run: echo 'Good Morning'
 
