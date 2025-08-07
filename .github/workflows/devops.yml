@@ -6,3 +6,6 @@ jobs:
     steps:
       - name: Morning greet
         run: echo 'Good Morning'
+
+      - name: Read file
+        run: cat .env.example
