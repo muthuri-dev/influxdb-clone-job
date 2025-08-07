@@ -15,3 +15,10 @@ jobs:
 
       - name: List dir
         run: ls -lart
+
+
+  addition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: add numbers
+        run: echo 3+9
