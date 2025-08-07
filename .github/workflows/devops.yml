@@ -39,7 +39,7 @@ jobs:
         run: sudo apt install nginx
 
       - name: start inginx
-        run: systemctl start nginx
+        run: sudo systemctl start nginx
 
       - name: check inginx status
-        run: systemctl status nginx
+        run: sudo systemctl status nginx
