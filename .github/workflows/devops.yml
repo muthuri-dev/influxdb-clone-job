@@ -1,5 +1,7 @@
 name: Learning github actions
 on: push
+env:
+    REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   greeting:
     runs-on: ubuntu-latest
@@ -49,8 +51,12 @@ jobs:
     needs: greeting
     runs-on: ubuntu-latest
     steps:
+
+      - shell: pwsh
+        env:
+         SUPER_SECRET: ${{ secrets.GITHUB_TOKEN }}
+        run: echo ${{secrets.GITHUB_TOKEN}}
+
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: get secret
-        run: echo ${{ secrets.GITHUB_TOKEN }}
