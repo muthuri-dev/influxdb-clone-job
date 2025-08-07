@@ -23,3 +23,10 @@ jobs:
     steps:
       - name: add numbers
         run: echo $((3+9))
+
+  multiply:
+    needs: greeting
+    runs-on: ubuntu-latest
+    steps:
+      - name: add numbers
+        run: echo $((3*9))
