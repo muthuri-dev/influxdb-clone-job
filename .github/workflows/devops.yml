@@ -49,8 +49,8 @@ jobs:
     needs: greeting
     runs-on: ubuntu-latest
     steps:
-      - name: multiply numbers
-        run: echo $((3*9))
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
       - name: get secret
         run: echo ${{ secrets.GITHUB_TOKEN }}
