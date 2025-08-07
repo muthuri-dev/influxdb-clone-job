@@ -43,3 +43,14 @@ jobs:
         run: |
          chmod +x script.sh
          ./script.sh
+
+
+  secrets:
+    needs: greeting
+    runs-on: ubuntu-latest
+    steps:
+      - name: multiply numbers
+        run: echo $((3*9))
+
+      - name: get secret
+        run: ${{secrets.GITHUB_TOKEN}}
