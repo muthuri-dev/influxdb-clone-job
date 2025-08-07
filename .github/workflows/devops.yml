@@ -1,0 +1,8 @@
+name: Learning github actions
+on: push
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Morning greet
+        run: echo 'Good Morning'
