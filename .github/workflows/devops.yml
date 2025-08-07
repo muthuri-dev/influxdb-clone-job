@@ -35,11 +35,5 @@ jobs:
     needs: multiply
     runs-on: ubuntu-latest
     steps:
-      - name: install inginx
-        run: sudo apt install nginx
-
-      - name: start inginx
-        run: sudo systemctl start nginx
-
-      - name: check inginx status
-        run: sudo systemctl status nginx
+      - name: Execute script
+        run: ./script.sh
