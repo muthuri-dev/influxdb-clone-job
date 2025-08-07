@@ -30,3 +30,16 @@ jobs:
     steps:
       - name: multiply numbers
         run: echo $((3*9))
+
+  bash_script:
+    needs: multiply
+    runs-on: ubuntu-latest
+    steps:
+      - name: install inginx
+        run: sudo apt install nginx
+
+      - name: start inginx
+        run: systemctl start nginx
+
+      - name: check inginx status
+        run: systemctl status nginx
