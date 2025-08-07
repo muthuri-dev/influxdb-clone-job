@@ -12,3 +12,6 @@ jobs:
 
       - name: Read file
         run: cat .env.example
+
+      - name: List dir
+        run: ls -lart
